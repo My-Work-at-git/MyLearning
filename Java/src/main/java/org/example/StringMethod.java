@@ -45,10 +45,18 @@ public class StringMethod {
                 "\nCharacters at 15th position from behind the string " +
                         "\""+string+"\" : %c", string.charAt(string.length()-15));
 
-        System.out.println("\n\nString Inspection Method IV: isEmpty()");
+        System.out.println("\n\nString Inspection Method III: indexOf()/lastIndexOf()");
+
+
         System.out.println("If a string is empty, length = 0, charAt(0) will " +
                 "\nthrow error 'java.lang.StringIndexOutOfBoundsException: Index 0 out of bounds for length 0'");
         String empty = "";
+        System.out.printf("Length of the string = %d",empty.length());
+//        System.out.printf("\nCharacter at index 0 = %c",empty.charAt(0));
+
+        System.out.println("\n\nString Inspection Method IV: isEmpty()");
+        System.out.println("If a string is empty, length = 0, charAt(0) will " +
+                "\nthrow error 'java.lang.StringIndexOutOfBoundsException: Index 0 out of bounds for length 0'");
         System.out.printf("Length of the string = %d",empty.length());
 //        System.out.printf("\nCharacter at index 0 = %c",empty.charAt(0));
 
