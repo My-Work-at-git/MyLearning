@@ -5,5 +5,7 @@ public class FormattingTextTest {
         Formatting format = new Formatting();
         format.escapeSequences();
         format.textBlock();
+        format.conversionNumber();
+        format.stringFormatting();
     }
 }
