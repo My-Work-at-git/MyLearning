@@ -150,12 +150,46 @@ public class StringMethod {
                       start and end index specified.
         """);
 
+
+        System.out.println("String manipulation: indent");
+        System.out.println("Adding spaces to the text.");
+        System.out.print("Binesh".indent(4));
+        System.out.println("Removing spaces to the text.");
+        System.out.println("    Binesh".indent(-2));
+
+
+        System.out.println("String manipulation: strip/stripLeading/stripTrailing/trim");
+        String str0 = "   Java is fun    ";
+        System.out.println("Before trimming or stripping: ");
+        System.out.println("Using strip: "+str0.strip());
+        System.out.println("Using stripLeading: "+str0.stripLeading());
+        System.out.println("Using stripTrailing: "+str0.stripTrailing());
+        System.out.println("Using trim: "+str0.trim());
+        System.out.println("Trim remove character space below u+0020 and don't recognize unicode space above that like u2005");
+        String str12 = "webspparrow.org \u2005";  // Unicode of white-space
+        System.out.println("Print text with white-space unicode: '"+str12+"'");
+        System.out.println("Print text with white-space unicode after trimming: '"+str12.trim()+"'");
+        System.out.println("Print text with white-space unicode after stripping: '"+str12.strip()+"'");
+        String str11 = " websparrow.org ";
+        System.out.println("Text with starting and trailing white-space: '"+str11+"'");
+        System.out.println(str11.trim().equals(str11.strip())); // return --> true
+        System.out.println("Text with trailing white-space and unicode space: '"+str12+"'");
+        System.out.println(str12.trim().equals(str12.strip())); // return --> false
+        String str13 = "\t websparrow.org \r";
+        // \r replaces text on right with the text on left
+        System.out.print("Text with starting tab trailing white-space: '"+str13);
+        System.out.println(str13.trim().equals(str13.strip())); // return --> true
+        String str14 = "\u2000";
+        System.out.println("Text with only unicode space: '"+str14+"'");
+        System.out.println(str14.trim().equals(str14.strip())); // return --> false
+
+
         String str2 = "Hello World";
         System.out.println("String manipulation: toUpperCase and toLowerCase");
         System.out.printf("To upper case = %s", str2.toUpperCase());
         System.out.println("\nTo lower case = "+str2.toLowerCase());
 
-        
+
         System.out.println("\nString manipulation: concat");
         System.out.println("There are three ways to concat: Method I");
         String str4 = "Java";
@@ -186,7 +220,22 @@ public class StringMethod {
                 "08", "1997"));
 
 
-        System.out.println("\nString manipulation: SubString");
+        System.out.println("\nString manipulation: Repeat");
+        String string = "Java ";
+        System.out.println(string.repeat(10));
+        System.out.println("-".repeat(50));
+        System.out.print(string.repeat(10));
+
+
+        System.out.println("\nString manipulation: Replace/ReplaceFirst/ReplaceAll");
+        String str10 = "Java is a programming language";
+        System.out.println("String replace method: "+str10.replace(' ', '/'));
+        System.out.println("String replace method: "+str10.replace("Java", "Python"));
+        System.out.println("String replace all method: "+str10.replaceAll(" ", "-"));
+        System.out.println("String replace first method: "+str10.replaceFirst(" ", ": "));
+
+
+        System.out.println("\n\nString manipulation: SubString");
         String str8 = "There are 8 planets in solar system";
         System.out.println("No.of planets in solar system: "+str8.substring(10, 11));
         int index = str8.indexOf('s', 19);
@@ -196,13 +245,6 @@ public class StringMethod {
         System.out.println("Birth month: "+str9.substring(str9.indexOf('/') + 1, str9.lastIndexOf('/')));
         System.out.println("Birth year: "+str9.substring(str9.lastIndexOf('/') + 1));
 
-
-        System.out.println("\nString manipulation: Replace/ReplaceFirst/ReplaceAll");
-        String str10 = "Java is a programming language";
-        System.out.println("String replace method: "+str10.replace(' ', '/'));
-        System.out.println("String replace method: "+str10.replace("Java", "Python"));
-        System.out.println("String replace all method: "+str10.replaceAll(" ", "-"));
-        System.out.println("String replace first method: "+str10.replaceFirst(" ", ": "));
     }
 }
 
