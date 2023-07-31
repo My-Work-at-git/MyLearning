@@ -28,6 +28,7 @@ public class StringMethod {
         System.out.println("\nTo print a string use %s");
         System.out.printf("For Example: %s%n", string);
 
+
         System.out.println("\nString Inspection Method I: Length");
         int length = string.length();
         System.out.printf(
@@ -37,6 +38,7 @@ public class StringMethod {
         System.out.println("\n\nTo print a character use %c");
         System.out.printf("For Example: %c%n", 'A');
 
+
         System.out.println("\nString Inspection Method II: charAt");
         System.out.printf(
                 "Characters at 15th position for the string " +
@@ -44,6 +46,7 @@ public class StringMethod {
         System.out.printf(
                 "\nCharacters at 15th position from behind the string " +
                         "\""+string+"\" : %c", string.charAt(string.length()-15));
+
 
         System.out.println("\n\nString Inspection Method III: indexOf()/lastIndexOf()");
         System.out.println("This will return index value for the character or string we provide");
@@ -59,12 +62,14 @@ public class StringMethod {
         System.out.printf("Using lastIndexOf to find index value of second 'l' " +
                 "in 'Hello world': %d%n", str.lastIndexOf('l',8));
 
+
         System.out.println("\nString Inspection Method IV: isEmpty()");
         System.out.println("If a string is empty, length = 0, charAt(0) will " +
                 "\nthrow error 'java.lang.StringIndexOutOfBoundsException: Index 0 out of bounds for length 0'");
         String empty = "";
         System.out.printf("Length of the string = %d",empty.length());
 //        System.out.printf("\nCharacter at index 0 = %c",empty.charAt(0));
+
 
         System.out.println("\n\nString Inspection Method V: isBlank()");
         System.out.println("If a string is blank/whiteSpace, length = no. of whiteSpaces, charAt(indexWithInBound) = whiteSpace");
@@ -88,6 +93,7 @@ public class StringMethod {
                     \u2022 regionMatches: Returns a boolean, if defined sub-regions are matched
                     \u2022 Comparator and matches covered in sorting of regular expressions""");
 
+
         String str = "Java is a programming language";
         System.out.println("\nString Comparison Method: contentEquals (Its more useful in string builder)");
         boolean condition = str.contentEquals("Java is a programming language") ? true : false;
@@ -95,11 +101,13 @@ public class StringMethod {
             System.out.println("String matches with argument");
         } else System.out.println("String doesn't matches with argument");
 
+
         System.out.println("\nString Comparison Method: equals");
         boolean condition1 = str.equals("Java is a programming language") ? true : false;
         if (condition1) {
             System.out.println("String matches with argument");
         } else System.out.println("String doesn't matches with argument");
+
 
         System.out.println("\nString Comparison Method: equalsIgnoreCase");
         String stringIgnore = str.toLowerCase();
@@ -108,11 +116,13 @@ public class StringMethod {
             System.out.println("String matches with argument ignoring case.");
         } else System.out.println("String doesn't matches with argument");
 
+
         System.out.println("\nString Comparison Method: contains");
         boolean condition3 = str.contains("Java") ? true : false;
         if (condition3) {
             System.out.println("String contains argument.");
         } else System.out.println("String doesn't contains argument");
+
 
         System.out.println("\nString Comparison Method: startsWith");
         boolean condition4 = str.startsWith("Java") ? true : false;
@@ -120,11 +130,13 @@ public class StringMethod {
             System.out.println("String starts with argument.");
         } else System.out.println("String doesn't starts with argument");
 
-        System.out.println("\nString Comparison Method: startsWith");
+
+        System.out.println("\nString Comparison Method: endsWith");
         boolean condition5 = str.endsWith("language") ? true : false;
         if (condition5) {
             System.out.println("String ends with argument.");
         } else System.out.println("String doesn't ends with argument");
+
 
         System.out.println("\nString Comparison Method: regionMatches");
         System.out.println("Arguments -> ignoreCase(boolean), toffset(Start index), other(comparing string)," +
@@ -135,6 +147,7 @@ public class StringMethod {
             System.out.println("String region matches with argument");
         } else System.out.println("String region doesn't matches with argument");
     }
+
     public void stringManipulationMethod() {
         System.out.println("""
                 \nManipulation methods includes:
@@ -235,7 +248,7 @@ public class StringMethod {
         System.out.println("String replace first method: "+str10.replaceFirst(" ", ": "));
 
 
-        System.out.println("\n\nString manipulation: SubString");
+        System.out.println("\nString manipulation: SubString");
         String str8 = "There are 8 planets in solar system";
         System.out.println("No.of planets in solar system: "+str8.substring(10, 11));
         int index = str8.indexOf('s', 19);
@@ -244,6 +257,7 @@ public class StringMethod {
         System.out.println("Birth day: "+str9.substring(0,2));
         System.out.println("Birth month: "+str9.substring(str9.indexOf('/') + 1, str9.lastIndexOf('/')));
         System.out.println("Birth year: "+str9.substring(str9.lastIndexOf('/') + 1));
+        System.out.println("SubSequence example: " + str8.subSequence(23, str8.length()));
 
     }
 }
