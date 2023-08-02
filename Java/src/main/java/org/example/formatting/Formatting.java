@@ -1,4 +1,4 @@
-package org.example;
+package org.example.formatting;
 
 public class Formatting {
     public void escapeSequences(){

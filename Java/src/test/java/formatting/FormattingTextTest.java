@@ -1,4 +1,6 @@
-import org.example.Formatting;
+package formatting;
+
+import org.example.formatting.Formatting;
 
 public class FormattingTextTest {
     public static void main(String[] args) {

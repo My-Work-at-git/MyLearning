@@ -1,4 +1,4 @@
-package org.example;
+package org.example.formatting;
 
 public class StringMethod {
     {
@@ -161,6 +161,7 @@ public class StringMethod {
                       a new String with replacement made.
                     \u2022 substring/subsequence: These return a part of the String, its range defined by the
                       start and end index specified.
+                    \u2022 Note: Its important to assign the result of any string manipulation method to a variable.
         """);
 
 
